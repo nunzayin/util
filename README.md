@@ -70,4 +70,4 @@ print anything to `stdout` or `stderr` and does not prompt user for anything.
 Made by nz aka nunzayin aka Nick Zaber
 
 ## License
-GNU GPL v3 (see the [`./LICENSE`](./LICENSE))
+GNU GPL v3 (see the [`LICENSE`](./LICENSE))
