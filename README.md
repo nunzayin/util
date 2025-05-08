@@ -37,8 +37,7 @@ following:
 ### Usage
 
 ```bash
-SYNTAX:
-    $ /path/to/sysmaint.sh
+$ /path/to/sysmaint.sh
 ```
 
 This script is meant to run in interactive shell since you will be prompted to
@@ -59,12 +58,11 @@ a default output.
 ### Usage
 
 ```bash
-SYNTAX:
-    $ /path/to/toggleaudio.sh
+$ /path/to/toggleaudio.sh
 ```
 
 This script can be invoked in the background. It accepts no arguments, does not
-print anything to `stdout`/`stderr` and does not prompt user for anything.
+print anything to `stdout` or `stderr` and does not prompt user for anything.
 
 > Eventually this script was desinged just to be called via i3wm keybinding.
 
@@ -72,4 +70,4 @@ print anything to `stdout`/`stderr` and does not prompt user for anything.
 Made by nz aka nunzayin aka Nick Zaber
 
 ## License
-GNU GPL v3 (see `./LICENSE`)
+GNU GPL v3 (see the [`./LICENSE`](./LICENSE))
