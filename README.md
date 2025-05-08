@@ -67,7 +67,7 @@ print anything to `stdout` or `stderr` and does not prompt user for anything.
 > Eventually this script was desinged just to be called via i3wm keybinding.
 
 ## Credits
-Made by nz aka nunzayin aka Nick Zaber
+Made by **nz** aka **nunzayin** aka **Nick Zaber**
 
 ## License
 GNU GPL v3 (see the [`LICENSE`](./LICENSE))
