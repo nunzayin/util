@@ -24,7 +24,7 @@ following:
 
 ### Dependencies
 
-> BTW most of the dependencies probably can be replaced (e.x. Arch with any
+> BTW most of the dependencies probably can be replaced (e.g. Arch with any
 > other `pacman`-based distro, `yay` - with any other AUR helper, etc.) but I'm
 > not gonna test them.
 
@@ -47,8 +47,8 @@ confirm at some stages.
 
 This is a script macro (i.e. without any arguments) that switches your output
 audio devices.\
-E.x. you have HDMI audio output and headphones. Currently the headphones are
-used as a default output. When you run this script, now it sets HDMI audio as
+E.g. you have HDMI audio output and headphones. Currently the headphones are
+used as a default output. When you run this script,it will set HDMI audio as
 a default output.
 
 ### Dependencies
