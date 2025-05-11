@@ -71,13 +71,6 @@ else
     echo "No orphaned packages to remove."
 fi
 
-stage "CLEARING HOME CACHE"
-home_cache_used="$(du -sh ~/.cache)"
-echo "Clearing ~/.cache/..."
-trash ~/.cache/*
-efat "Could not move ~/.cache to trash"
-echo "Spaced saved: $home_cache_used"
-
 stage "CLEARING SYSTEM LOGS"
 sudo journalctl --vacuum-time=7d
 efat "Could not clear syslogs"

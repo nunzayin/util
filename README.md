@@ -15,7 +15,6 @@ following:
 - Performing full system update (including AUR packages)
 - Clearing `pacman` cache
 - Removing orphaned packages
-- Clearing `~/.cache`
 - Clearing system logs
 
 > [!NOTE]
