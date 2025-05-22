@@ -55,6 +55,11 @@ MODULE="module's name" # Traditionally the name is the same as its filename
 DEPS=("yay" "fzf" "paccache") # Note that DEPS var should be iterable
 ```
 
+> [!NOTE]
+> Elements of DEPS are not packages, but rather <ins>commands</ins> that are used in your
+> module. For example, you have some command like `yay -Qqe | fzf`, so you should add
+> `"yay"` and `"fzf"`.
+
 ## Creating a module
 
 Create a file where you want. Name it as you want, traditionally since it's a shell script and
