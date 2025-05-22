@@ -18,5 +18,5 @@ function omz_update_deps() {
 if omz_update_deps; then
     stage "UPDATING OH MY ZSH"
     # Updating it is also... a thing
-    zsh -ic "omz update"
+    zsh -ic "omz update; exit 0"
 fi
