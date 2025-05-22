@@ -9,37 +9,48 @@ Uhhhhm
 
 ## `sysmaint.sh`
 
-This is a script macro (i.e. without any arguments) that performs the
-following:
-- Refreshing mirror lists
-- Performing full system update (including AUR packages)
-- Clearing `pacman` cache
-- Removing orphaned packages
-- Clearing system logs
+This is a bash script that provides a simple framework for creating and executing
+system maintenance scripts (aka modules) all at once. Execute one file and
+~~get a segfault~~ run all the preconfigured modules.
 
-> [!NOTE]
-> `sysmaint.sh` uses `trash` instead of `rm`. This is made just in case that
-> something breaks.
+### Modules
+
+`sysmaint.sh` is just a starting point. The only thing it does is providing some
+useful functions and including the config file. All the tasks are performed by
+the modules added via the config file. See the source of the module you want to add.
+The repository provides some modules that inherit sysmaint's pre-modular features.
+You can see them at (and add them from) [`sysm_modules`](./sysm_modules) directory.
+Also see the [`sysm_modules/README.md`](./sysm_modules/README.md).
 
 ### Dependencies
 
-> BTW most of the dependencies probably can be replaced (e.g. Arch with any
-> other `pacman`-based distro, `yay` - with any other AUR helper, etc.) but I'm
-> not gonna test them.
+The main script itself requires bash only whereas each module defines its own
+dependencies. See the source of the module you want to add. If dependencies are not
+satisfied, the module will be skipped.
 
-- Arch Linux
-- `rate-mirrors`
-- `yay`
-- `pacman-contrib`
-- `trash-cli`
+### Configuring
+
+All the configurations are made in a single file `$HOME/.config/sysm_include.sh`. It
+is a bash script which is supposed to be used just to include other scripts (modules)
+you want to add. You should provide absolute paths to the files but sysmaint provides
+a simple $MODULES variable that leads to the repo modules directory. Here's a legit
+(i.e. working) example `sysm_include.sh` file, try copying it and execute sysmaint:
+
+```bash
+. $MODULES/mirrors.sh
+. $MODULES/update.sh
+. $MODULES/syslogs.sh
+```
+
+Of course since it's just a shell script you are free to add there whatever you want.
 
 ### Usage
 
 ```bash
-$ /path/to/sysmaint.sh
+$ /path/to/util/sysmaint.sh
 ```
 
-This script is meant to run in interactive shell since you will be prompted to
+This script is meant to run in interactive shell since you can be prompted to
 confirm at some stages.
 
 ## `toggleaudio.sh`
@@ -47,12 +58,12 @@ confirm at some stages.
 This is a script macro (i.e. without any arguments) that switches your output
 audio devices.\
 E.g. you have HDMI audio output and headphones. Currently the headphones are
-used as a default output. When you run this script,it will set HDMI audio as
+used as a default output. When you run this script, it will set HDMI audio as
 a default output.
 
 ### Dependencies
 
-- PulseAudio
+- PulseAudio (works also on pipewire-pulse)
 
 ### Usage
 
