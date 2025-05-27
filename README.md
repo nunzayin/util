@@ -1,3 +1,7 @@
+> [!WARNING]
+> This repository has been split into several others and is now archived.
+> See `sysmaint` and `togglesound`
+
 # NZ's utils
 
 These are utilities that I created to make using my PC and maintaining OS more
